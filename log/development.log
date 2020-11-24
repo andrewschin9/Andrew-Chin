@@ -4075,3 +4075,35 @@ Migrating to CreateCategoryProducts (20201124003046)
   [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
   [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(4423496750447225430)[0m
   [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (4.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Create (9.0ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Heavy"], ["created_at", "2020-11-24 00:41:33.075898"], ["updated_at", "2020-11-24 00:41:33.075898"]]
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Create (0.5ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Light"], ["created_at", "2020-11-24 00:41:40.154862"], ["updated_at", "2020-11-24 00:41:40.154862"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Create (2.0ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Small"], ["created_at", "2020-11-24 00:41:45.990095"], ["updated_at", "2020-11-24 00:41:45.990095"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (6.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Create (3.6ms)[0m  [1m[32mINSERT INTO "categories" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Large"], ["created_at", "2020-11-24 00:41:49.875204"], ["updated_at", "2020-11-24 00:41:49.875204"]]
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (2.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategoryProduct Create (9.7ms)[0m  [1m[32mINSERT INTO "category_products" ("product_id", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["product_id", 1], ["category_id", 1], ["created_at", "2020-11-24 00:42:52.229097"], ["updated_at", "2020-11-24 00:42:52.229097"]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategoryProduct Create (0.5ms)[0m  [1m[32mINSERT INTO "category_products" ("product_id", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["product_id", 2], ["category_id", 1], ["created_at", "2020-11-24 00:43:05.274064"], ["updated_at", "2020-11-24 00:43:05.274064"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategoryProduct Create (1.5ms)[0m  [1m[32mINSERT INTO "category_products" ("product_id", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["product_id", 3], ["category_id", 1], ["created_at", "2020-11-24 00:43:07.602870"], ["updated_at", "2020-11-24 00:43:07.602870"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategoryProduct Create (0.7ms)[0m  [1m[32mINSERT INTO "category_products" ("product_id", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["product_id", 4], ["category_id", 2], ["created_at", "2020-11-24 00:43:36.607181"], ["updated_at", "2020-11-24 00:43:36.607181"]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategoryProduct Create (0.5ms)[0m  [1m[32mINSERT INTO "category_products" ("product_id", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["product_id", 5], ["category_id", 2], ["created_at", "2020-11-24 00:43:39.942029"], ["updated_at", "2020-11-24 00:43:39.942029"]]
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategoryProduct Create (0.6ms)[0m  [1m[32mINSERT INTO "category_products" ("product_id", "category_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["product_id", 6], ["category_id", 2], ["created_at", "2020-11-24 00:43:42.228607"], ["updated_at", "2020-11-24 00:43:42.228607"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCategoryProduct Load (0.3ms)[0m  [1m[34mSELECT "category_products".* FROM "category_products" LIMIT $1[0m  [["LIMIT", 11]]
