@@ -1,0 +1,11 @@
+@products.map do |product|  
+  { 
+    id: product.id,
+    title: product.title,
+    price: number_to_currency(product.price),
+    description: product.description,
+    tax: number_to_currency(product.tax),
+    is_discounted: product.is_discounted?,
+    supplier_id: product.supplier_id
+  }
+end

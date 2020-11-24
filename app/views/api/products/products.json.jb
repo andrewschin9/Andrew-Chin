@@ -1,0 +1,8 @@
+ {
+    id: @product.id,
+    tax: @product.tax,
+    title: @product.title,
+    price: @product.price,
+    description: @product.description,
+    inventory: @product.inventory
+  }

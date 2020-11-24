@@ -1,0 +1,4 @@
+{
+  item: @item,
+  message: "This item has been destroyed."
+}
