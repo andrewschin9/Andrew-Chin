@@ -4,6 +4,7 @@
     Quantity: order.quantity,
     Subtotal: order.subtotal,
     Tax: order.tax,
-    Total: order.total
+    Total: order.total,
+    Category: order.categories
   } 
 end
